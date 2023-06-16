@@ -1,0 +1,42 @@
+
+#Call an API 
+
+import requests
+api_url = "https://jsonplaceholder.typicode.com/todos/1"
+response = requests.get(api_url)
+response.json()
+{'userId': 1, 'id': 1, 'title': 'delectus aut autem', 'completed': False}
+
+
+#Convert Json to pandas 
+https://sparkbyexamples.com/pandas/pandas-convert-json-to-dataframe/?expand_article=1
+
+
+#Convert nested Json to Pandas df 
+https://www.geeksforgeeks.org/converting-nested-json-structures-to-pandas-dataframes/
+
+df = pd.json_normalize(data, record_path=['employees'], meta=[
+                       'company', 'location', ['info', 'president']])
+print(df)
+
+
+
+
+***************************************************************************************
+from flask import Flask, render_template
+
+app=Flask(__name__)
+
+@app.route('/')
+def hello():
+    return 'hello'
+	
+@app.route('/html')
+def index():
+    return render_template('index.html')
+	
+	
+*****************************************************************
+
+
+
